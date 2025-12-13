@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact - AEEPCT</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .contact {
+      max-width: 600px;
+      margin: 40px auto;
+      font-size: 18px;
+      line-height: 1.8;
+      background-color: #ffffff;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    .contact p {
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="menu-btn" onclick="toggleMenu()">&#9776;</div>
+
+  <nav id="sideMenu" class="side-menu">
+    <ul>
+      <li><a href="a-propos.html">À propos</a></li>
+      <li><a href="bureau.html">Bureau exécutif</a></li>
+      <li><a href="objectif.html">Objectif</a></li>
+      <li><a href="calendrier.html">Calendrier des activités</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="galerie.html">Nos mouvements en images</a></li>
+    </ul>
+  </nav>
+
+  <header>
+    <h1>Contactez l'AEEPCT</h1>
+  </header>
+
+  <main class="contact">
+    <p>📧 <strong>Email :</strong> aeepct@gmail.com</p>
+    <p>📞 <strong>Téléphone :</strong> +229 0155512212 (Tel du président / WhatsApp + appel)</p>
+    <p>📍 <strong>Siège :</strong> Tchatchou</p>
+    <p>📝 <strong>N'hésitez pas à nous contacter</strong> pour toute information ou suggestion.</p>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 AEEPCT - Tous droits réservés</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

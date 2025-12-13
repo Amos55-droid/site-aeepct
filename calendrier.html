@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Calendrier des activités - AEEPCT</title>
+  <link rel="stylesheet" href="style.css" />
+
+  <style>
+    .calendrier {
+      max-width: 900px;
+      margin: 30px auto;
+      font-size: 18px;
+      line-height: 1.7;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 0 8px rgba(0,0,0,0.1);
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Bouton menu hamburger -->
+  <div class="menu-btn" onclick="toggleMenu()">☰</div>
+
+  <!-- Menu latéral -->
+  <nav id="sideMenu" class="side-menu">
+    <ul>
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="a-propos.html">À propos</a></li>
+      <li><a href="bureau-executif.html">Bureau exécutif</a></li>
+      <li><a href="objectif.html">Objectif</a></li>
+      <li><a href="calendrier.html">Calendrier des activités</a></li>
+      <li><a href="galerie.html">Nos mouvements en images</a></li>
+      <li><a href="adhésion.html">Formulaire d’adhésion</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- En-tête -->
+  <header>
+    <img src="amos.jpg" alt="Logo de l'AEEPCT" class="logo">
+    <h1>
+      Association des Élèves et Étudiants Peulhs  
+      de la Commune de Tchaourou (AEEPCT)
+    </h1>
+  </header>
+
+  <!-- 🔹 Menu horizontal (hors menu hamburger) -->
+  <section class="pages-horizontal fade-in">
+    <a href="index.html">Accueil</a>
+    <a href="a-propos.html">À propos</a>
+    <a href="bureau-executif.html">Bureau Exécutif</a>
+    <a href="objectif.html">Objectif</a>
+    <a href="calendrier.html">Calendrier</a>
+    <a href="galerie.html">Galerie</a>
+    <a href="adhésion.html">Adhésion</a>
+    <a href="contact.html">Contact</a>
+  </section>
+
+  <!-- Contenu principal -->
+  <main class="calendrier">
+    <h2>Calendrier des activités</h2>
+
+    <p>
+      L’AEEPCT organise régulièrement des tournées de sensibilisation dans les établissements
+      scolaires de la commune, principalement chaque mois. Ces tournées permettent de renforcer
+      les liens avec les élèves, de promouvoir les valeurs de l’association et de mobiliser les
+      membres autour des actions éducatives et citoyennes.
+    </p>
+
+    <p>
+      À la veille de chaque session d’examen national (BEPC ou Baccalauréat), nous mettons en place
+      une série d’activités spéciales en soutien aux candidats membres :
+    </p>
+
+    <ul>
+      <li>📚 Collecte et distribution des sujets d’anciennes épreuves des examens précédents.</li>
+      <li>👨‍🏫 Mise à disposition de professionnels pour l’animation de TD et de révisions ciblées.</li>
+      <li>🤝 Encadrement moral et psychologique des candidats.</li>
+    </ul>
+
+    <p>
+      Ces activités visent à améliorer les performances scolaires de nos membres,
+      à encourager l’excellence académique et à renforcer l’esprit de solidarité
+      intergénérationnelle au sein de l’AEEPCT.
+    </p>
+  </main>
+
+  <!-- Pied de page -->
+  <footer>
+    <p>&copy; 2025 AEEPCT - Tous droits réservés</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

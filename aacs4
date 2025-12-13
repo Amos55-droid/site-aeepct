@@ -1,0 +1,116 @@
+/* Style général du body */
+body {
+  background-color: #f8f9fa;
+  color: #333;
+  font-family: Arial, sans-serif;
+}
+
+/* Style du diaporama */
+.diaporama {
+  position: relative;
+  width: 90%;
+  max-width: 800px;
+  margin: 30px auto;
+  height: auto;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+/* Style des images du diaporama */
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  transition: opacity 1s ease-in-out; /* Effet de fondu */
+  opacity: 0;
+  z-index: 0; /* Pour cacher les images qui ne sont pas visibles */
+  border-radius: 12px;
+}
+
+/* Menu latéral */
+.side-menu {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 250px;
+  height: 100%;
+  background-color: #005a87;
+  color: white;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.3);
+  transform: translateX(-100%);
+  transition: transform 0.3s ease-in-out;
+}
+
+.side-menu.active {
+  transform: translateX(0);
+}
+
+/* Style du menu */
+.side-menu ul {
+  list-style-type: none;
+  padding: 20px;
+}
+
+.side-menu li {
+  padding: 10px;
+}
+
+.side-menu a {
+  color: white;
+  text-decoration: none;
+  display: block;
+}
+
+/* Style de l’en-tête */
+header {
+  background-color: #005a87;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Style du texte */
+h1, h2 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+/* Style des liens du menu */
+.side-menu a:hover {
+  background-color: #007bb5;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #005a87;
+  color: white;
+}
+
+footer p {
+  margin: 5px 0;
+}
+
+@media (max-width: 600px) {
+  /* Styles pour petits écrans (mobiles) */
+  .menu-btn {
+    font-size: 30px;
+  }
+
+  .diaporama {
+    width: 100%;
+    margin: 20px auto;
+  }
+
+  .slide {
+    width: 100%;
+  }
+
+  header {
+    font-size: 1.5rem;
+  }
+}
