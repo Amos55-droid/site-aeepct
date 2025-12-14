@@ -23,7 +23,7 @@
     /* Conteneur responsive pour tableau */
     .table-responsive {
       width: 100%;
-      overflow-x: auto; /* permet le scroll horizontal sur mobile */
+      overflow-x: auto; /* scroll horizontal sur mobile */
       margin: 30px auto;
     }
 
@@ -130,6 +130,13 @@
       padding: 20px;
       margin-top: 50px;
     }
+
+    /* 🔹 Cacher le menu horizontal sur mobile */
+    @media screen and (max-width: 768px) {
+      .pages-horizontal {
+        display: none;
+      }
+    }
   </style>
 </head>
 
@@ -200,7 +207,7 @@
 
   <!-- Pied de page -->
   <footer>
-    <p>&copy; 2025 AEEPCT - Tous droits réservés</p>
+    <p>&copy; 2025 AEEPCT</p>
   </footer>
 
   <script src="script.js"></script>
