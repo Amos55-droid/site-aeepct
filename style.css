@@ -100,10 +100,16 @@ h1, h2 {
 }
 
 /* Tableau du bureau exécutif */
+.table-responsive {
+  width: 100%;
+  overflow-x: auto; /* scroll horizontal sur mobile */
+  -webkit-overflow-scrolling: touch; /* lisse sur iOS */
+  margin: 30px auto;
+}
+
 table {
   width: 100%;
   max-width: 900px;
-  margin: 30px auto;
   border-collapse: collapse;
   background-color: white;
   box-shadow: 0 2px 10px rgba(0,0,0,0.1);
@@ -118,31 +124,6 @@ th, td {
 th {
   background-color: var(--main-color);
   color: white;
-}
-
-/* Responsive table */
-@media screen and (max-width: 600px) {
-  table, thead, tbody, th, td, tr {
-    display: block;
-  }
-
-  thead tr {
-    display: none;
-  }
-
-  td {
-    position: relative;
-    padding-left: 50%;
-    border: none;
-    border-bottom: 1px solid #ccc;
-  }
-
-  td::before {
-    content: attr(data-label);
-    position: absolute;
-    left: 10px;
-    font-weight: bold;
-  }
 }
 
 /* Diaporama */
@@ -220,6 +201,8 @@ iframe {
   border: none;
   border-radius: 8px;
 }
+
+/* Animation fade-in */
 .fade-in {
   animation: fadeIn 1s ease-in;
 }
