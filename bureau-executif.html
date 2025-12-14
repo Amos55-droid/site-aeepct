@@ -2,8 +2,8 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <title>Bureau Exécutif - AEEPCT</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bureau Exécutif - AEEPCT</title>
   <link rel="stylesheet" href="style.css">
 
   <style>
@@ -20,9 +20,15 @@
       color: #2c3e50;
     }
 
-    table {
-      width: 90%;
+    /* Conteneur responsive pour tableau */
+    .table-responsive {
+      width: 100%;
+      overflow-x: auto; /* permet le scroll horizontal sur mobile */
       margin: 30px auto;
+    }
+
+    table {
+      width: 100%;
       border-collapse: collapse;
       background: white;
       box-shadow: 0 0 10px rgba(0,0,0,0.1);
@@ -39,10 +45,90 @@
       color: white;
     }
 
+    /* Menu horizontal */
+    .pages-horizontal {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      padding: 15px;
+      background: #f4f6f8;
+    }
+
+    .pages-horizontal a {
+      text-decoration: none;
+      color: #1a1a1a;
+      font-weight: 600;
+      padding: 10px 16px;
+      border-radius: 6px;
+      border: 1px solid #007bff;
+      transition: all 0.3s ease;
+    }
+
+    .pages-horizontal a:hover {
+      background-color: #007bff;
+      color: #fff;
+      transform: translateY(-2px);
+    }
+
+    /* Menu hamburger */
+    .menu-btn {
+      position: fixed;
+      top: 10px;
+      left: 10px;
+      font-size: 30px;
+      color: white;
+      background-color: #2E8B57;
+      padding: 10px;
+      cursor: pointer;
+      z-index: 1001;
+      border-radius: 5px;
+    }
+
+    .side-menu {
+      position: fixed;
+      top: 0;
+      left: -250px;
+      width: 250px;
+      height: 100%;
+      background-color: #2E8B57;
+      color: white;
+      transition: left 0.3s ease;
+      padding-top: 60px;
+      z-index: 1000;
+    }
+
+    .side-menu.open {
+      left: 0;
+    }
+
+    .side-menu ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .side-menu ul li {
+      padding: 15px 20px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .side-menu ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .side-menu ul li a:hover {
+      color: #ffd700;
+    }
+
+    /* Pied de page */
     footer {
       text-align: center;
-      margin: 30px 0;
-      color: #666;
+      background-color: #2E8B57;
+      color: white;
+      padding: 20px;
+      margin-top: 50px;
     }
   </style>
 </head>
@@ -61,7 +147,6 @@
       <li><a href="objectif.html">Objectif</a></li>
       <li><a href="calendrier.html">Calendrier des activités</a></li>
       <li><a href="galerie.html">Nos mouvements en images</a></li>
-      <li><a href="adhésion.html">Formulaire d’adhésion</a></li>
       <li><a href="contact.html">Contact</a></li>
     </ul>
   </nav>
@@ -69,21 +154,17 @@
   <!-- En-tête -->
   <header>
     <img src="amos.jpg" alt="Logo de l'AEEPCT" class="logo">
-    <h1>
-      Association des Élèves et Étudiants Peulhs  
-      de la Commune de Tchaourou (AEEPCT)
-    </h1>
+    <h1>Association des Élèves et Étudiants Peulhs de la Commune de Tchaourou (AEEPCT)</h1>
   </header>
 
-  <!-- 🔹 Menu horizontal (hors menu hamburger) -->
-  <section class="pages-horizontal fade-in">
+  <!-- Menu horizontal -->
+  <section class="pages-horizontal">
     <a href="index.html">Accueil</a>
     <a href="a-propos.html">À propos</a>
     <a href="bureau-executif.html">Bureau Exécutif</a>
     <a href="objectif.html">Objectif</a>
     <a href="calendrier.html">Calendrier</a>
     <a href="galerie.html">Galerie</a>
-    <a href="adhésion.html">Adhésion</a>
     <a href="contact.html">Contact</a>
   </section>
 
@@ -91,28 +172,30 @@
   <main>
     <h1>Membres du Bureau Exécutif</h1>
 
-    <table>
-      <thead>
-        <tr>
-          <th>N°</th>
-          <th>Poste</th>
-          <th>Nom et Prénom</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr><td>1</td><td>Président</td><td>SANGAROU Julien</td></tr>
-        <tr><td>2</td><td>Vice-Président</td><td>Mohamed OUSMANE</td></tr>
-        <tr><td>3</td><td>Secrétaire Général</td><td>TASSO Saré</td></tr>
-        <tr><td>4</td><td>Secrétaire Général Adjoint</td><td>WOROUDJO Johanna</td></tr>
-        <tr><td>5</td><td>Trésorière Générale</td><td>AMON Jacqueline</td></tr>
-        <tr><td>6</td><td>Trésorière Générale Adjointe</td><td>Bouyagui Amos</td></tr>
-        <tr><td>7</td><td>Premier Organisateur</td><td>DJABO Marakou</td></tr>
-        <tr><td>8</td><td>Deuxième Organisateur</td><td>DOUDOU Mohammed</td></tr>
-        <tr><td>9</td><td>Affaires culturelles</td><td>ARZEKE Jérémie</td></tr>
-        <tr><td>10</td><td>Affaires féminines</td><td>KADRI Fadima</td></tr>
-        <tr><td>11</td><td>Alphabétisation</td><td>BONI Djodi</td></tr>
-      </tbody>
-    </table>
+    <div class="table-responsive">
+      <table>
+        <thead>
+          <tr>
+            <th>N°</th>
+            <th>Poste</th>
+            <th>Nom et Prénom</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>1</td><td>Président</td><td>SANGAROU Julien</td></tr>
+          <tr><td>2</td><td>Vice-Président</td><td>Mohamed OUSMANE</td></tr>
+          <tr><td>3</td><td>Secrétaire Général</td><td>TASSO Saré</td></tr>
+          <tr><td>4</td><td>Secrétaire Général Adjoint</td><td>WOROUDJO Johanna</td></tr>
+          <tr><td>5</td><td>Trésorière Générale</td><td>AMON Jacqueline</td></tr>
+          <tr><td>6</td><td>Trésorière Générale Adjointe</td><td>Bouyagui Amos</td></tr>
+          <tr><td>7</td><td>Premier Organisateur</td><td>DJABO Marakou</td></tr>
+          <tr><td>8</td><td>Deuxième Organisateur</td><td>DOUDOU Mohammed</td></tr>
+          <tr><td>9</td><td>Affaires culturelles</td><td>ARZEKE Jérémie</td></tr>
+          <tr><td>10</td><td>Affaires féminines</td><td>KADRI Fadima</td></tr>
+          <tr><td>11</td><td>Alphabétisation</td><td>BONI Djodi</td></tr>
+        </tbody>
+      </table>
+    </div>
   </main>
 
   <!-- Pied de page -->

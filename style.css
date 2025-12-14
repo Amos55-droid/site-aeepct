@@ -254,3 +254,10 @@ iframe {
   color: #fff;
   transform: translateY(-2px);
 }
+
+/* 🔹 Cacher le menu horizontal sur écrans ≤ 768px (smartphones et tablettes) */
+@media screen and (max-width: 768px) {
+  .pages-horizontal {
+    display: none;
+  }
+}
